@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Countries Api</title>
+</head>
+
+<body>
+    <div class="loadingState loader">
+        <img src="./loading.gif" alt="">
+    </div>
+    <div class="search">
+        <input type="text" class="search" placeholder="search for the country" onkeypress="searchFunc(this)">
+        <button class="searchBtn" onclick="searchBtn()">Search Country</button>
+    </div>
+    <div class="select">
+        <select name="countrySelection" id="countrySelection" onchange="selectCountry(this)"></select>
+    </div>
+    <div class="container">
+    </div>
+</body>
+
+</html>

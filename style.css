@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap");
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+}
+
+:root {
+  --blended-bg: 31, 27, 36;
+  --common-radius: 5px;
+}
+
+body,
+html {
+  width: 100%;
+}
+
+body {
+  background: rgba(var(--blended-bg), 0.7);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader > img {
+  height: 10%;
+}
+
+.container {
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search {
+  margin: 0.5rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.search input,
+.searchBtn {
+  width: fit-content;
+  padding: 0.5rem 0.7rem;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+.searchBtn {
+  background: rgb(var(--blended-bg));
+  cursor: pointer;
+  border-radius: var(--common-radius);
+}
+.search > input {
+  background: rgb(var(--blended-bg));
+  border-radius: var(--common-radius);
+}
+.select {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.select select {
+  width: fit-content;
+  appearance: none;
+  max-width: 100%;
+  padding: 0.5rem 1rem;
+  background: rgb(var(--blended-bg));
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: var(--common-radius);
+}
+
+.select select::-webkit-scrollbar {
+  width: 0.2rem;
+  background: rgb(var(--blended-bg), 0.3);
+}
+
+.select select::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
+.country {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 3px 5px rgb(var(--blended-bg), 0.6);
+  background: rgb(235, 235, 235);
+}
+
+.flag {
+  width: 100%;
+  height: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.flag > img {
+  height: 100%;
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.flag:hover > img {
+  scale: 1.1;
+}
